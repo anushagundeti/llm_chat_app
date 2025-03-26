@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: root
+  password: tiger
+  host: <%= ENV['DB_HOST'] || 'localhost' %>
+  port: 5433
+
+development:
+  <<: *default
+  database: llm_chat_app_development
+
+test:
+  <<: *default
+  database: llm_chat_app_test
+
+production:
+  <<: *default
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>

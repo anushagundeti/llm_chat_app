@@ -1,0 +1,17 @@
+<div class="chat-container" data-controller="chat">
+  <div class="chat-window">
+    <div 
+      class="messages" 
+      id="chat_messages" 
+      data-chat-target="messages"
+    >
+      <%= render @chats %>
+    </div>
+
+    <%= turbo_frame_tag "new_chat_form" do %>
+      <div data-chat-target="form">
+        <%= render 'form' %>
+      </div>
+    <% end %>
+  </div>
+</div>

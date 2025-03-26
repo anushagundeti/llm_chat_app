@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+/* app/assets/stylesheets/application.css */
+/* app/assets/stylesheets/chats.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.message-content {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.user-message {
+    align-items: flex-end;
+}
+
+.user-message .message-content {
+    background-color: #e6f2ff;
+    margin-left: auto;
+    text-align: right;
+}
+
+.ai-message {
+    align-items: flex-start;
+}
+
+.ai-message .message-content {
+    background-color: #f0f0f0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.error-message .message-content {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.message-time {
+    font-size: 10px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.user-message .message-time {
+    text-align: right;
+}
+
+.ai-message .message-time {
+    text-align: left;
+}
+
+.chat-input-form {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+}
+
+.chat-input-form textarea {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px 15px;
+    resize: none;
+    margin-right: 10px;
+    font-size: 14px;
+    max-height: 100px;
+}
+
+.chat-input-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input-form input[type="submit"]:hover {
+    background-color: #45a049;
+}

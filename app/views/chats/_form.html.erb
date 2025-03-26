@@ -1,0 +1,14 @@
+<%= form_with(model: @chat || Chat.new, 
+              id: 'chat-form', 
+              class: 'chat-input-form', 
+              data: { 
+                action: 'turbo:submit-end->chat#resetForm',
+                controller: 'chat'
+              }) do |form| %>
+  <textarea 
+    name="chat[prompt]" 
+    placeholder="Type your message..." 
+    data-chat-target="input"
+  ></textarea>
+  <%= form.submit "Send", class: 'send-button' %>
+<% end %>

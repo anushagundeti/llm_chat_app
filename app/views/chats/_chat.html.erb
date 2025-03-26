@@ -1,0 +1,17 @@
+<div class="message user-message">
+  <div class="message-content">
+    <%= chat.prompt %>
+  </div>
+  <div class="message-time">
+    <%= chat.created_at.strftime("%I:%M %p") %>
+  </div>
+</div>
+
+<div class="message ai-message <%= chat.response.start_with?('Error') ? 'error-message' : '' %>">
+  <div class="message-content">
+    <%= chat.response %>
+  </div>
+  <div class="message-time">
+    <%= chat.created_at.strftime("%I:%M %p") %>
+  </div>
+</div>
