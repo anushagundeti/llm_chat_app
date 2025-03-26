@@ -67,3 +67,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+group :production do
+  gem 'pg'  # PostgreSQL gem
+  gem 'rails_12factor'  # Helps with static asset serving and logging
+end
