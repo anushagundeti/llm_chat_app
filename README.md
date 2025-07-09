@@ -1,24 +1,33 @@
-# README
+# 🤖 LLM Chat App — Rails + Hotwire + OpenAI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A lightweight, real-time chat application powered by **Ruby on Rails**, **Hotwire**, and **OpenAI**.  
+This project demonstrates how to build a streaming chat interface with minimal JavaScript, using **Turbo Streams** and **Stimulus**, while integrating OpenAI for intelligent responses.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## 🚀 Features
 
-* System dependencies
+- 🔁 Real-time message streaming with Turbo
+- ⚡ Minimal JavaScript using Stimulus controllers
+- 🧠 AI-powered chat via OpenAI API
+- 🗨️ Auto-scrolling chat UI with live updates
+- 💾 Messages persisted in a database
 
-* Configuration
+---
 
-* Database creation
+## 🧱 Tech Stack
 
-* Database initialization
+- **Backend**: Ruby on Rails 7
+- **Frontend**: Hotwire (Turbo + Stimulus)
+- **AI Integration**: [ruby-openai](https://github.com/alexrudall/ruby-openai)
+- **Database**: SQLite or PostgreSQL
+- **Hosting**: Local / Any Rails-compatible PaaS
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## 🛠️ Setup Instructions
 
-* Deployment instructions
-
-* ...
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/anushagundeti/llm_chat_app.git
+   cd llm_chat_app
